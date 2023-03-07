@@ -1,0 +1,4 @@
+requests==2.27.1
+PyTelegramBotAPI==3.7.9
+# numpy==1.16.4
+rocketry
