@@ -1,0 +1,4 @@
+**/.terraform/
+**/.package/
+**/venv/
+venv/
