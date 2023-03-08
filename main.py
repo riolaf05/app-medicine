@@ -8,27 +8,29 @@ logger = logging.getLogger(__name__)
 app = Rocketry()
 
 PROJECT_NAME = 'telegrambotmedicine'
-TELEGRAM_TOKEN = ''
-CHAT_ID = ''
+TELEGRAM_TOKEN = '<TOKEN>'
+CHAT_ID = '<CHAT_ID>'
 CYCLE=28
 BUCKET='rioaws-app-medicine'
 USER='Pietro'
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 calendar = {
-    '12:10': 'Pillola1',
-    '12:12': 'Pillola2',
-    '12:13': 'Pillola3',
-    '12:14': 'Pillola4',
+    '09:00': 'Levantair Spray',
+    '09:30': 'Antunes',
+    '22:30': 'Sinvastatina',
+    '18:00': 'Seleparina'
     }
 
 def test_send_message(msg):
     bot_text = '''
-        Bip-bop umano {},
+        Buongiorno {},
 
-    E' il momento di prendere {}
+    E' il momento di prendere: {}
 
-    Created with ❤️ by Ros
+    🩺💊⚕️😷
+
+    Created by Ros
         '''.format(USER, msg)
     tb = telebot.TeleBot(TELEGRAM_TOKEN)
     ret_msg = tb.send_message(CHAT_ID, bot_text)
